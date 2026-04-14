@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ketan Mahandule — AI/ML Engineer & Researcher</title>
+  <meta name="description" content="Portfolio of Ketan Mahandule — AI/ML Engineer, researcher, and open-source contributor specializing in machine learning, data science, and software engineering." />
+  <meta property="og:title" content="Ketan Mahandule — AI/ML Engineer & Researcher" />
+  <meta property="og:description" content="AI/ML Engineer at Tech Mahindra. Researcher in additive regression models. Builder of open-source AI tools." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+  <!-- Scroll progress -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <!-- ─── NAV ─── -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" id="nav-logo">KM</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#research" class="nav-link">Research</a></li>
+        <li><a href="#writings" class="nav-link">Writings</a></li>
+        <li><a href="#thoughts" class="nav-link">Thoughts</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <section id="hero" class="hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <canvas id="star-canvas"></canvas>
+    </div>
+    <!-- Floating geometric decorations -->
+    <div class="hero-geo hero-ring-1"></div>
+    <div class="hero-geo hero-ring-2"></div>
+    <div class="hero-dot-grid">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for Collaboration
+      </div>
+      <h1 class="hero-name">
+        <span class="hero-first">Ketan</span>
+        <span class="hero-last">Mahandule</span>
+      </h1>
+      <div class="hero-roles">
+        <span class="role-text" id="role-text">AI/ML Engineer</span>
+      </div>
+      <p class="hero-tagline">
+        Building intelligent systems at the intersection of data, research & code.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          View My Work
+        </a>
+        <a href="#contact" class="btn btn-ghost">Let's Connect</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">2+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">2</span>
+          <span class="stat-label">Research Papers</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">4+</span>
+          <span class="stat-label">Open Source Projects</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ─── -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Who I Am</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-lead">
+            I am an Associate Software Engineer at <strong>Tech Mahindra</strong> with a strong foundation in Computer Science and a deep passion for Artificial Intelligence.
+          </p>
+          <p>
+            My primary interest lies in AI research, particularly <strong>mechanistic interpretability</strong>, where I aim to better understand how intelligent systems think and make decisions.
+          </p>
+          <p>
+            Driven by curiosity and a problem-solving mindset, I enjoy tackling complex challenges and continuously expanding my knowledge at the intersection of theory and real-world applications. I am committed to long-term growth in AI, with the goal of contributing meaningfully to cutting-edge research and impactful innovations.
+          </p>
+          <p>
+            Beyond building and learning, I have a natural inclination toward <strong>teaching and sharing knowledge</strong>. I find great fulfillment in breaking down complex ideas and helping others understand them, contributing to a more informed and collaborative tech community.
+          </p>
+          <p>
+            I am always open to meaningful collaborations, research opportunities, and discussions that push the boundaries of AI. Let's connect and build something impactful. 🚀
+          </p>
+          <div class="about-chips">
+            <span class="chip">Python</span>
+            <span class="chip">Machine Learning</span>
+            <span class="chip">Deep Learning</span>
+            <span class="chip">LLMs</span>
+            <span class="chip">Mechanistic Interpretability</span>
+            <span class="chip">Streamlit</span>
+            <span class="chip">LangChain</span>
+            <span class="chip">Data Science</span>
+            <span class="chip">RAG</span>
+          </div>
+        </div>
+        <div class="about-right">
+          <div class="experience-card">
+            <h3 class="exp-heading">Experience</h3>
+            <div class="exp-list">
+              <div class="exp-item">
+                <div class="exp-dot exp-dot--primary"></div>
+                <div class="exp-body">
+                  <div class="exp-title">Associate Software Engineer</div>
+                  <div class="exp-company">Tech Mahindra · Full-time</div>
+                  <div class="exp-period">Sep 2023 – Present · 2+ yrs</div>
+                </div>
+              </div>
+              <div class="exp-item">
+                <div class="exp-dot exp-dot--purple"></div>
+                <div class="exp-body">
+                  <div class="exp-title">AI/ML Lead</div>
+                  <div class="exp-company">IODump · Full-time</div>
+                  <div class="exp-period">Jan 2023 – Dec 2023 · 1 yr</div>
+                </div>
+              </div>
+              <div class="exp-item">
+                <div class="exp-dot exp-dot--teal"></div>
+                <div class="exp-body">
+                  <div class="exp-title">Python Programming Trainer</div>
+                  <div class="exp-company">Infeanet Digital Solution · Freelance</div>
+                  <div class="exp-period">May 2023 – Sep 2023 · 5 mos</div>
+                </div>
+              </div>
+              <div class="exp-item">
+                <div class="exp-dot exp-dot--amber"></div>
+                <div class="exp-body">
+                  <div class="exp-title">R&D Intern</div>
+                  <div class="exp-company">Enactus Kirori Mal · Internship</div>
+                  <div class="exp-period">Aug 2020 – Sep 2020 · 2 mos</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ─── -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I Build</span>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">Open-source tools, AI applications, and data engineering projects.</p>
+      </div>
+      <div class="projects-grid" id="projects-grid">
+
+        <a href="https://github.com/lucifer007-coder/chat-with-gemma" target="_blank" rel="noopener" class="project-card" data-tags="AI,LLM,Python" style="display:block;text-decoration:none;color:inherit;">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <div class="project-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+              </div>
+              <div class="project-badge">AI / LLM</div>
+            </div>
+            <h3 class="project-title">Chat with Gemma</h3>
+            <p class="project-desc">A production-ready Streamlit interface for conversational AI with local Gemma models via Ollama. Features three interaction modes: Chat, RAG for querying uploaded documents, and WebSearch for real-time information.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Streamlit</span>
+              <span class="tech-tag">Ollama</span>
+              <span class="tech-tag">LangChain</span>
+              <span class="tech-tag">RAG</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-link" id="link-chat-gemma">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+                View on GitHub
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://github.com/lucifer007-coder/data-pre-processing-studio-plus" target="_blank" rel="noopener" class="project-card" data-tags="Data,Python,ML" style="display:block;text-decoration:none;color:inherit;">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <div class="project-icon" style="background: linear-gradient(135deg, #11998e, #38ef7d);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M7 12l3 3 7-7"/></svg>
+              </div>
+              <div class="project-badge">Data Engineering</div>
+            </div>
+            <h3 class="project-title">Data Preprocessing Studio+</h3>
+            <p class="project-desc">An interactive, modular Streamlit application that simplifies data preprocessing and feature engineering. Support CSV/DPS bundles, interactive pipeline building, advanced missing data imputation (KNN), real-time visualizations, and Dask for large datasets.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Streamlit</span>
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">Dask</span>
+              <span class="tech-tag">Scikit-learn</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-link" id="link-dps">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+                View on GitHub
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://github.com/lucifer007-coder/DIff-Gantt" target="_blank" rel="noopener" class="project-card" data-tags="Visualization,JavaScript" style="display:block;text-decoration:none;color:inherit;">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <div class="project-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h2M12 14h4M8 18h2M12 18h4"/></svg>
+              </div>
+              <div class="project-badge">Visualization</div>
+            </div>
+            <h3 class="project-title">DIff-Gantt</h3>
+            <p class="project-desc">A web-based tool that generates Gantt-style timeline visualizations to track row-level changes (inserts, updates, deletions) between two CSV dataset versions. Features auto primary-key detection and full dark/light mode support.</p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Data Diff</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-link" id="link-diff-gantt">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+                View on GitHub
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://github.com/lucifer007-coder/streamlit-reasoning-visualizer" target="_blank" rel="noopener" class="project-card open-source-card" data-tags="Open Source,AI,Python" style="display:block;text-decoration:none;color:inherit;">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <div class="project-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+              </div>
+              <div class="project-badge open-source">⭐ Open Source Contribution</div>
+            </div>
+            <h3 class="project-title">Streamlit Reasoning Visualizer</h3>
+            <p class="project-desc">A plug-and-play Streamlit component for visualizing LLM reasoning processes with collapsible thought sections. Supports Markdown and LaTeX rendering, making AI decision-making transparent and readable for developers.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Streamlit</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">LLM</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-link" id="link-reasoning-viz">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+                View on GitHub
+              </span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── RESEARCH ─── -->
+  <section id="research" class="section research-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Academic Work</span>
+        <h2 class="section-title">Research Publications</h2>
+        <p class="section-subtitle">Exploring machine learning methods for financial forecasting.</p>
+      </div>
+      <div class="research-grid">
+
+        <div class="research-card">
+          <div class="research-meta">
+            <span class="research-journal">IJRPR</span>
+            <span class="research-date">Jun 2, 2023</span>
+          </div>
+          <h3 class="research-title">Forecasting Stock Prices: An Investigation into the Performance of Additive Regression Models</h3>
+          <p class="research-abstract">An in-depth investigation comparing the effectiveness of additive regression models for stock price forecasting, analyzing different model configurations and their predictive accuracy across various market conditions.</p>
+          <div class="research-tags">
+            <span class="r-tag">Additive Regression</span>
+            <span class="r-tag">Stock Forecasting</span>
+            <span class="r-tag">Time Series</span>
+            <span class="r-tag">ML</span>
+          </div>
+          <div class="research-footer">
+            <div class="research-venue">International Journal of Research Publication and Reviews</div>
+            <a href="https://ijrpr.com/uploads/V4ISSUE6/IJRPR14012.pdf" target="_blank" rel="noopener" class="research-link" id="link-paper-1">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              Read Paper
+            </a>
+          </div>
+        </div>
+
+        <div class="research-card">
+          <div class="research-meta">
+            <span class="research-journal">JETIR</span>
+            <span class="research-date">May 24, 2023</span>
+          </div>
+          <h3 class="research-title">Exploring Additive Regression Models and fbprophet for Stock Price Prediction</h3>
+          <p class="research-abstract">A comprehensive exploration of additive regression methodologies combined with Facebook's Prophet model for predicting stock market prices, evaluating forecasting accuracy and model interpretability in financial contexts.</p>
+          <div class="research-tags">
+            <span class="r-tag">fbprophet</span>
+            <span class="r-tag">Additive Models</span>
+            <span class="r-tag">Stock Prediction</span>
+            <span class="r-tag">Facebook Prophet</span>
+          </div>
+          <div class="research-footer">
+            <div class="research-venue">Journal of Emerging Technologies and Innovative Research</div>
+            <a href="http://www.jetir.org/papers/JETIR2305966.pdf" target="_blank" rel="noopener" class="research-link" id="link-paper-2">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              Read Paper
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── WRITINGS / BLOG ─── -->
+  <section id="writings" class="section writings-section">
+    <div class="container">
+      <div class="section-header-row">
+        <div>
+          <span class="section-tag">Blog</span>
+          <h2 class="section-title">Writings</h2>
+          <p class="section-subtitle">Essays, technical deep-dives, and reflections.</p>
+        </div>
+        <button class="btn btn-ghost admin-trigger" id="writings-admin-btn">+ New Post</button>
+      </div>
+
+      <div class="writings-grid" id="writings-grid">
+        <!-- populated by JS (renderWritings) -->
+      </div>
+      <div id="writings-empty" class="empty-state" style="display:none;">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+        <p>No writings yet. Check back soon!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── STREAM OF CONSCIOUSNESS ─── -->
+  <section id="thoughts" class="section thoughts-section">
+    <div class="container">
+      <div class="section-header-row">
+        <div>
+          <span class="section-tag">Brain Dump</span>
+          <h2 class="section-title">Stream of Consciousness</h2>
+          <p class="section-subtitle">Unfiltered thoughts, observations, and flashes of insight.</p>
+        </div>
+        <button class="btn btn-ghost admin-trigger" id="thoughts-admin-btn">+ Add Thought</button>
+      </div>
+      <div class="thoughts-feed" id="thoughts-feed">
+        <!-- populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ─── -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="section-header">
+          <span class="section-tag">Let's Talk</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">Whether it's a project, a paper, or just a conversation about AI — I'm always open.</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:ketanedumail@gmail.com" class="contact-card" id="contact-email">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">Email</div>
+              <div class="contact-value">ketanedumail@gmail.com</div>
+            </div>
+          </a>
+          <a href="https://github.com/lucifer007-coder" target="_blank" rel="noopener" class="contact-card" id="contact-github">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">GitHub</div>
+              <div class="contact-value">lucifer007-coder</div>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/ketan-mahandule/" target="_blank" rel="noopener" class="contact-card" id="contact-linkedin">
+            <div class="contact-icon" style="background: linear-gradient(135deg, #0077b5, #00a0dc);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">LinkedIn</div>
+              <div class="contact-value">ketan-mahandule</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">KM</div>
+        <p class="footer-text">Built with curiosity. © <span id="footer-year"></span> Ketan Mahandule.</p>
+        <div class="footer-links">
+          <a href="https://github.com/lucifer007-coder" target="_blank" rel="noopener" id="footer-github">GitHub</a>
+          <a href="mailto:ketanedumail@gmail.com" id="footer-email">Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── ADMIN LOGIN MODAL ─── -->
+  <div id="admin-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="admin-modal-title">
+    <div class="modal">
+      <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+      <h3 id="admin-modal-title" class="modal-title">Admin Access</h3>
+      <p class="modal-subtitle">Enter your password to post content.</p>
+      <input type="password" id="admin-password" class="modal-input" placeholder="Password" autocomplete="current-password" />
+      <div id="admin-error" class="modal-error" style="display:none;">Incorrect password. Try again.</div>
+      <button class="btn btn-primary" id="admin-login-btn" style="width:100%;margin-top:12px;">Unlock</button>
+    </div>
+  </div>
+
+  <!-- ─── THOUGHT EDITOR MODAL ─── -->
+  <div id="thought-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="thought-modal-title">
+    <div class="modal modal--wide">
+      <button class="modal-close" id="thought-modal-close" aria-label="Close">✕</button>
+      <h3 id="thought-modal-title" class="modal-title">New Thought</h3>
+      <textarea id="thought-input" class="modal-textarea" placeholder="What's on your mind? (280 chars)" maxlength="280"></textarea>
+      <div class="thought-char-count"><span id="thought-chars">0</span>/280</div>
+      <button class="btn btn-primary" id="save-thought-btn" style="width:100%;margin-top:12px;">Post Thought</button>
+    </div>
+  </div>
+
+  <!-- ─── WRITING EDITOR MODAL ─── -->
+  <div id="writing-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="writing-modal-title">
+    <div class="modal modal--wide modal--large">
+      <button class="modal-close" id="writing-modal-close" aria-label="Close">✕</button>
+      <h3 id="writing-modal-title" class="modal-title">New Writing</h3>
+      <input type="text" id="writing-title-input" class="modal-input" placeholder="Title" />
+      <input type="text" id="writing-category-input" class="modal-input" style="margin-top:10px;" placeholder="Category (e.g. Machine Learning, Career)" />
+      <textarea id="writing-body-input" class="modal-textarea" style="min-height:200px;margin-top:10px;" placeholder="Write your post here... (Markdown supported)"></textarea>
+      <button class="btn btn-primary" id="save-writing-btn" style="width:100%;margin-top:12px;">Publish</button>
+    </div>
+  </div>
+
+  <!-- ─── READING MODAL ─── -->
+  <div id="reading-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="reading-modal-title">
+    <div class="modal modal--wide modal--large">
+      <button class="modal-close" id="reading-modal-close" aria-label="Close">✕</button>
+      <div id="reading-content" class="reading-content"></div>
+    </div>
+  </div>
+
+  <script src="js/effects.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+</body>
+</html>
