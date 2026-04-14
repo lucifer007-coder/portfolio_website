@@ -1,0 +1,223 @@
+/* ═══════════════════════════════════════════════════════════
+   ANIMATIONS — KEYFRAMES + SPECIAL EFFECTS
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─── CORE KEYFRAMES ─── */
+@keyframes orb-float {
+  0%, 100% { transform: translateY(0) scale(1) rotate(0deg); }
+  33%       { transform: translateY(-40px) scale(1.04) rotate(3deg); }
+  66%       { transform: translateY(-20px) scale(0.97) rotate(-2deg); }
+}
+
+@keyframes spin-slow {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes blink-caret {
+  0%, 100% { border-color: var(--primary); }
+  50%       { border-color: transparent; }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 8px var(--emerald); }
+  50%       { opacity: 0.7; transform: scale(0.8); box-shadow: 0 0 4px var(--emerald); }
+}
+
+@keyframes pulse-ring {
+  0%   { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(2.2); }
+}
+
+@keyframes bounce-down {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(10px); }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradient-pan {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes card-glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(99,102,241,0.2); }
+  50%       { box-shadow: 0 0 40px rgba(99,102,241,0.45), 0 0 60px rgba(34,211,238,0.15); }
+}
+
+@keyframes float-badge {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
+@keyframes particle-burst {
+  0%   { transform: translate(var(--tx, 0), var(--ty, 0)) scale(1); opacity: 1; }
+  100% { transform: translate(var(--tx2, 0), var(--ty2, 0)) scale(0); opacity: 0; }
+}
+
+@keyframes stat-count {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes greeting-wave {
+  0%, 100% { transform: rotate(0deg); }
+  20%       { transform: rotate(20deg); }
+  40%       { transform: rotate(-10deg); }
+  60%       { transform: rotate(16deg); }
+  80%       { transform: rotate(-6deg); }
+}
+
+/* ─── HERO ENTRANCE ANIMATIONS ─── */
+.hero-badge    { animation: fade-in-up 0.7s ease both 0.1s; }
+.hero-name     { animation: fade-in-up 0.8s ease both 0.25s; }
+.hero-roles    { animation: fade-in-up 0.7s ease both 0.45s; }
+.hero-tagline  { animation: fade-in-up 0.7s ease both 0.55s; }
+.hero-cta      { animation: fade-in-up 0.7s ease both 0.65s; }
+.hero-stats    { animation: fade-in-up 0.7s ease both 0.8s; }
+
+/* ─── SCROLL REVEAL ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 0.75s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+/* ─── THOUGHT CARD ENTRANCE ─── */
+.thought-card:nth-child(1)  { animation: fade-in-up 0.4s ease both 0.0s; }
+.thought-card:nth-child(2)  { animation: fade-in-up 0.4s ease both 0.08s; }
+.thought-card:nth-child(3)  { animation: fade-in-up 0.4s ease both 0.16s; }
+.thought-card:nth-child(4)  { animation: fade-in-up 0.4s ease both 0.24s; }
+.thought-card:nth-child(5)  { animation: fade-in-up 0.4s ease both 0.32s; }
+.thought-card:nth-child(6)  { animation: fade-in-up 0.4s ease both 0.40s; }
+
+/* ─── PROJECT CARD STAGGER ON LOAD ─── */
+.project-card:nth-child(1) { animation: fade-in-up 0.5s ease both 0.1s; }
+.project-card:nth-child(2) { animation: fade-in-up 0.5s ease both 0.2s; }
+.project-card:nth-child(3) { animation: fade-in-up 0.5s ease both 0.3s; }
+.project-card:nth-child(4) { animation: fade-in-up 0.5s ease both 0.4s; }
+
+/* ─── GRADIENT TEXT SHIMMER on section titles ─── */
+.section-title span.shimmer-text {
+  background: linear-gradient(
+    120deg,
+    var(--text) 0%,
+    var(--text) 30%,
+    var(--primary-light) 50%,
+    var(--text) 70%,
+    var(--text) 100%
+  );
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+/* ─── HERO GEO ANIMATIONS ─── */
+.hero-geo { animation: fade-in-up 1.2s ease both 1s; }
+
+/* ─── STAT ANIMATION ─── */
+.stat-num.animating {
+  animation: stat-count 0.5s ease both;
+}
+
+/* ─── CURSOR PARTICLE ─── */
+.cursor-particle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99996;
+  border-radius: 50%;
+  animation: particle-burst 0.6s ease forwards;
+  width: 6px; height: 6px;
+}
+
+/* ─── GRADIENT BORDER ROTATE (for featured items) ─── */
+.grad-border {
+  position: relative;
+}
+.grad-border::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: conic-gradient(from var(--angle, 0deg),
+    var(--primary) 0%,
+    var(--accent) 25%,
+    var(--secondary) 50%,
+    var(--pink) 75%,
+    var(--primary) 100%);
+  z-index: -1;
+  animation: rotate-border 4s linear infinite;
+}
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes rotate-border {
+  to { --angle: 360deg; }
+}
+
+/* ─── NAV ACTIVE INDICATOR ─── */
+.nav-link.active {
+  background: rgba(99,102,241,0.12);
+  border: 1px solid rgba(99,102,241,0.2);
+  color: var(--primary-light);
+}
+
+/* ─── WRITING CARD STAGGER ─── */
+.writing-card:nth-child(1) { animation: fade-in-up 0.5s ease both 0.0s; }
+.writing-card:nth-child(2) { animation: fade-in-up 0.5s ease both 0.1s; }
+.writing-card:nth-child(3) { animation: fade-in-up 0.5s ease both 0.2s; }
+
+/* ─── EXPERIENCE ITEM STAGGER ─── */
+.exp-item { animation: fade-in-up 0.5s ease both; }
+.exp-item:nth-child(1) { animation-delay: 0.05s; }
+.exp-item:nth-child(2) { animation-delay: 0.15s; }
+.exp-item:nth-child(3) { animation-delay: 0.25s; }
+.exp-item:nth-child(4) { animation-delay: 0.35s; }
+
+/* ─── TOOLTIP STYLE ─── */
+[data-tooltip] {
+  position: relative;
+}
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 5px 12px;
+  font-size: 0.72rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+[data-tooltip]:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
