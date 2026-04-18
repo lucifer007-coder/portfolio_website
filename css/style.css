@@ -59,6 +59,8 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   cursor: none;
+  /* Force GPU acceleration for smoother scrolling */
+  transform: translateZ(0);
 }
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; }
@@ -141,6 +143,7 @@ body.cursor-hover .cursor-ring {
   padding: 0 40px;
   transition: all var(--transition);
   border-bottom: 1px solid transparent;
+  will-change: transform, background, backdrop-filter;
 }
 
 .navbar.scrolled {
@@ -624,6 +627,8 @@ body.cursor-hover .cursor-ring {
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius);
   position: relative;
+  /* Hint browser about GPU usage */
+  will-change: transform, opacity;
 }
 
 /* Gradient border via pseudo-element */
@@ -1666,7 +1671,12 @@ body.admin-mode .thought-edit-btn { display: flex; }
 .empty-state p { font-size: 0.9rem; }
 
 /* ─── REVEAL ─── */
-.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1); }
+.reveal { 
+  opacity: 0; 
+  transform: translateY(28px); 
+  transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1); 
+  will-change: transform, opacity;
+}
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
 /* ─── RESPONSIVE ─── */
@@ -1729,6 +1739,11 @@ body.admin-mode .thought-edit-btn { display: flex; }
   
   .modal { padding: 30px 20px; border-radius: var(--radius-lg); }
   .modal--wide, .modal--large { max-width: 100%; }
+
+  /* Reduce blur intensity on mobile to save GPU */
+  .glass-card, .navbar.scrolled {
+    backdrop-filter: blur(10px) saturate(140%);
+  }
 }
 
 @media (max-width: 480px) {
