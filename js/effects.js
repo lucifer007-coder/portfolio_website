@@ -136,6 +136,7 @@ function initCardTilt() {
    5. MOUSE SPOTLIGHT ON CARDS
    ───────────────────────────────────────── */
 function initCardSpotlight() {
+  if (window.innerWidth < 768) return; // Disable on mobile/touch
   const cards = document.querySelectorAll('.project-card, .research-card, .contact-card');
 
   cards.forEach(card => {
@@ -311,9 +312,19 @@ function initStarCanvas() {
     setTimeout(spawnShooting, delay);
   }
 
-  function draw() {
+  let lastFrameTime = 0;
+  function draw(now) {
+    const isMobile = window.innerWidth < 768;
+    
+    // Throttle to ~30FPS on mobile
+    if (isMobile && now - lastFrameTime < 33) {
+      requestAnimationFrame(draw);
+      return;
+    }
+    lastFrameTime = now;
+
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    const t = Date.now() * 0.001;
+    const t = now * 0.001;
 
     // Stars
     stars.forEach(s => {
@@ -348,9 +359,15 @@ function initStarCanvas() {
   }
 
   resize();
-  draw();
+  requestAnimationFrame(draw);
   setTimeout(spawnShooting, 2000);
-  window.addEventListener('resize', resize);
+
+  // Debounced resize
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(resize, 200);
+  }, { passive: true });
 }
 
 /* ─────────────────────────────────────────
